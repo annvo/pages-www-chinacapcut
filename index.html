@@ -1,0 +1,445 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="index,follow">
+  <meta name="description" content="CapCut 产品与生态观察 汇总与「CapCut」相关的公开报道、产品动态、行业背景与争议信息，供独立阅读、材料预研与域名资产展示。页面持续标明与品牌无关，并按约 1:3 展示进展与风险。">
+  <title>CapCut 产品与生态观察 · chinacapcut.com</title>
+  <style>
+    :root{
+      --ink:#101820;--muted:#5b6772;--line:#e5e0d4;--paper:#f5f2ea;--card:#fffdf8;
+      --deep:#0b1720;--accent:#8b5e2b;--good:#166534;--bad:#9f1239;
+      --good-bg:#eef8f1;--bad-bg:#fdf1f3;--shadow:0 1px 0 rgba(16,24,32,.04),0 14px 36px rgba(16,24,32,.06);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.7 "PingFang SC","Microsoft YaHei",system-ui,sans-serif}
+    a{color:inherit}
+    .wrap{width:min(1140px,calc(100% - 40px));margin:0 auto}
+    .banner{background:var(--deep);color:#dce5ec;font-size:13px}
+    .banner .wrap{display:flex;gap:16px;justify-content:space-between;align-items:center;padding:11px 0;flex-wrap:wrap}
+    .banner strong{color:#fff}
+    .banner a{color:#f0d7a4}
+    header.site{position:sticky;top:0;z-index:30;background:rgba(245,242,234,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    header.site .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 0}
+    .brand b{display:block;font-size:15px}
+    .brand span{display:block;font-size:12px;color:var(--muted);max-width:42vw;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    nav{display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+    nav a{text-decoration:none}
+    nav a:hover{color:var(--ink)}
+    .cta{background:var(--deep);color:#fff;text-decoration:none;padding:10px 14px;border-radius:10px;font-size:13px;font-weight:700;white-space:nowrap}
+    .hero{padding:42px 0 24px}
+    .hero-grid{display:grid;grid-template-columns:1.45fr .85fr;gap:24px}
+    .kicker{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:10px}
+    h1{margin:0 0 14px;font:700 clamp(28px,4vw,42px)/1.18 "Georgia","Songti SC",serif}
+    .lead{margin:0;color:var(--muted);font-size:16.5px;max-width:62ch}
+    .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+    .chip{background:#efe7d7;color:#4a3b27;border-radius:999px;padding:5px 10px;font-size:12px;font-weight:700}
+    .side{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .side h2{margin:0 0 10px;font-size:14px}
+    .side p{margin:0 0 10px;font-size:13px;color:var(--muted)}
+    .stat{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+    .stat div{background:#f1ece1;border-radius:12px;padding:12px}
+    .stat b{display:block;font-size:22px;line-height:1}
+    .stat span{font-size:12px;color:var(--muted)}
+    section{padding:30px 0}
+    .sec-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:16px;flex-wrap:wrap}
+    .sec-head h2{margin:0;font:700 26px/1.2 "Georgia","Songti SC",serif}
+    .sec-head p{margin:6px 0 0;color:var(--muted);font-size:14px;max-width:64ch}
+    .note{font-size:12px;color:var(--muted);background:#efe7d7;padding:8px 12px;border-radius:999px}
+    .news-board{display:grid;grid-template-columns:1fr 1.4fr;gap:16px}
+    .col{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);min-height:300px}
+    .col-h{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+    .col-h h3{margin:0;font-size:15px}
+    .count{font-size:12px;font-weight:800;padding:4px 8px;border-radius:999px}
+    .col.good .col-h{background:var(--good-bg)}
+    .col.bad .col-h{background:var(--bad-bg)}
+    .col.good .count{background:#d7f0e0;color:var(--good)}
+    .col.bad .count{background:#f8d8e0;color:var(--bad)}
+    .col-body{padding:12px;display:flex;flex-direction:column;gap:10px}
+    .nc{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fff}
+    .nc.positive{border-left:3px solid var(--good)}
+    .nc.critical{border-left:3px solid var(--bad)}
+    .nc-meta{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);margin-bottom:8px}
+    .badge{font-weight:800;color:var(--ink)}
+    .nc h3{margin:0 0 8px;font-size:15px;line-height:1.4}
+    .nc h3 a{text-decoration:none}
+    .nc h3 a:hover{text-decoration:underline;text-underline-offset:2px}
+    .nc p{margin:0 0 10px;font-size:13.5px;color:#334155}
+    .nc-foot{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted)}
+    .nc-foot a{color:var(--accent);font-weight:800;text-decoration:none}
+    .empty{padding:28px 14px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px;font-size:14px}
+    .g2{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}
+    .g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+    .card,.block,.guide,.step,.time,.risk{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px}
+    .card h3,.block h3,.step h3,.risk h3{margin:0 0 8px;font-size:14px}
+    .card p,.block p,.guide p,.step p,.time p,.risk p{margin:0;font-size:13.5px;color:var(--muted)}
+    .guide b,.step b,.time b{display:block;font-size:12px;color:var(--accent);margin-bottom:6px;letter-spacing:.04em}
+    .panel{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow)}
+    .panel h3{margin:0 0 12px;font-size:15px}
+    .panel ol,.panel ul{margin:0;padding-left:18px;color:#334155;font-size:14px}
+    .panel li{margin:0 0 8px}
+    .risk{display:flex;gap:12px;align-items:flex-start}
+    .risk .lv{flex:0 0 auto;font-size:12px;font-weight:800;padding:4px 8px;border-radius:999px}
+    .lv-hi .lv{background:#f8d8e0;color:var(--bad)}
+    .lv-mid .lv{background:#f5e6c8;color:#8a5a12}
+    .lv-lo .lv{background:#e4eef8;color:#1e4f7a}
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .faq{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 14px;margin:0 0 8px}
+    .faq summary{cursor:pointer;padding:14px 0;font-weight:700;font-size:14px;list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq p{margin:0 0 14px;color:var(--muted);font-size:13.5px}
+    .res{display:flex;flex-direction:column;gap:4px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;text-decoration:none}
+    .res:hover{border-color:#0b1720}
+    .res strong{font-size:14px}
+    .res span{font-size:12.5px;color:var(--muted)}
+    .longp{margin:0 0 14px;color:#334155;font-size:15px;max-width:78ch}
+    pre{margin:0;white-space:pre-wrap;font:13px/1.55 ui-monospace,Consolas,monospace;color:#334155;background:#f4efe4;border-radius:10px;padding:12px}
+    .cmp{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;overflow:auto}
+    .cmp h3{margin:0 0 10px;font-size:14px}
+    table{width:100%;border-collapse:collapse;font-size:13.5px}
+    th,td{border:1px solid var(--line);padding:10px;vertical-align:top;text-align:left}
+    th{background:#f1ece1}
+    .disc{background:var(--deep);color:#c9d4dd;border-radius:18px;padding:24px;box-shadow:var(--shadow)}
+    .disc h2{margin:0 0 12px;color:#fff;font:700 22px/1.25 "Georgia","Songti SC",serif}
+    .disc p{margin:0 0 10px;font-size:14px}
+    .disc a{color:#f0d7a4}
+    footer{border-top:1px solid var(--line);padding:22px 0 40px;color:var(--muted);font-size:13px}
+    footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+    footer strong{color:var(--ink)}
+    .news-toolbar{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px;margin-bottom:14px}
+    .tool-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;box-shadow:var(--shadow)}
+    .tool-card b{display:block;font-size:13px;margin-bottom:6px}
+    .tool-card p{margin:0;font-size:13px;color:var(--muted)}
+    .tool-card ul{margin:0;padding-left:18px;color:#334155;font-size:13px}
+    .tool-card li{margin:0 0 4px}
+    .col-help{margin:4px 0 0;font-size:12px;color:var(--muted);font-weight:400;max-width:36ch}
+    .news-foot-note{margin:12px 0 0;font-size:12.5px;color:var(--muted)}
+    .subhead{margin:0 0 10px;font-size:14px;color:var(--accent);letter-spacing:.04em}
+    .fact-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:16px}
+    .fact-card{min-height:96px;background:var(--deep);color:#fff;border-radius:12px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;gap:10px}
+    .fact-card span{font-size:11px;color:#d8bd8f;font-weight:800;letter-spacing:.06em}
+    .fact-card strong{font-size:14px;line-height:1.55;font-weight:700}
+    .nc .stance-tag{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px;margin-right:8px}
+    .nc.positive .stance-tag{background:#d7f0e0;color:var(--good)}
+    .nc.critical .stance-tag{background:#f8d8e0;color:var(--bad)}
+    code{font-family:ui-monospace,Consolas,monospace;font-size:12px;background:#efe7d7;padding:1px 6px;border-radius:6px}
+    @media(max-width:960px){.news-toolbar,.fact-strip{grid-template-columns:1fr}}
+    @media(max-width:960px){
+      .hero-grid,.news-board,.g2{grid-template-columns:1fr}
+      .g3,.g4,.steps{grid-template-columns:1fr 1fr}
+      nav{display:none}
+    }
+    @media(max-width:560px){
+      .wrap{width:min(100% - 28px,1140px)}
+      .g3,.g4,.steps{grid-template-columns:1fr}
+      h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="banner"><div class="wrap">
+    <div><strong>独立站 · 与品牌无关</strong> — 非官方、无授权、非客服。商标名仅用于指称公开讨论对象。</div>
+    <div>日更识别 00:00 CST · <a href="mailto:admin@chinacapcut.com">admin@chinacapcut.com</a></div>
+  </div></div>
+
+  <header class="site"><div class="wrap">
+    <div class="brand"><b>chinacapcut.com</b><span>品牌观察 · CapCut 产品与生态观察</span></div>
+    <nav>
+      <a href="#news">新闻双栏</a>
+      <a href="#industry">行业分析</a>
+      <a href="#brand">品牌切片</a>
+      <a href="#focus">维度</a>
+      <a href="#method">方法</a>
+      <a href="#risk">风险</a>
+      <a href="#play">流程</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">联系</a>
+    </nav>
+    <a class="cta" href="mailto:admin@chinacapcut.com?subject=%E8%81%94%E7%B3%BB%20chinacapcut.com">合作 / 过户询价</a>
+  </div></header>
+
+  <main>
+    <section class="hero"><div class="wrap hero-grid">
+      <div>
+        <div class="kicker">品牌观察 · 内容创作工具</div>
+        <h1>CapCut 产品与生态观察</h1>
+        <p class="lead">CapCut 产品与生态观察 汇总与「CapCut」相关的公开报道、产品动态、行业背景与争议信息，供独立阅读、材料预研与域名资产展示。页面持续标明与品牌无关，并按约 1:3 展示进展与风险。</p>
+        <div class="chips"><span class="chip">CapCut</span><span class="chip">剪映</span></div>
+      </div>
+      <aside class="side">
+        <h2>本页不是官网</h2>
+        <p>本站是关于「CapCut」公开信息的独立观察页，与 CapCut 及其关联公司无隶属、无授权、无代言、无代理关系。本站不提供官方客服、账户登录、售后受理或产品销售。页面出现的商标名、产品名仅用于指称公开讨论对象，便于检索与对照阅读。</p>
+        <div class="stat">
+          <div><b id="pos-count">2</b><span>进展上限 4</span></div>
+          <div><b id="crit-count">5</b><span>风险上限 12</span></div>
+        </div>
+        <p style="margin-top:12px;margin-bottom:0">编排目标：风险约 3× 进展。无材料时显示空态，不补假新闻。更新：<span id="news-updated">等待每日零点任务写入</span></p>
+      </aside>
+    </div></section>
+
+    <section id="news"><div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>每日公开报道双栏</h2>
+          <p>左栏汇集与「CapCut」相关的建设性公开进展，右栏放大投诉、合规、安全与失败案例。目标展示比约 1:3，用来对冲“好消息更容易被转发”的传播偏差。摘要只负责扫描，原文负责裁决。</p>
+        </div>
+        <div class="note">进展上限 4 / 风险上限 12。配额是上限不是任务：没有材料就空态，不硬凑负面，不编造正面。</div>
+      </div>
+
+      <div class="news-toolbar">
+        <div class="tool-card">
+          <b>如何使用双栏</b>
+          <p>先扫右栏风险，再看左栏进展；只把“主体对齐 + 有原文 + 有日期”的条目升级为内部结论。</p>
+        </div>
+        <div class="tool-card">
+          <b>更新与 API</b>
+          <p>日更 00:00 CST。更新标记：<span id="news-updated">等待每日零点任务写入</span> · 同域 <code>/api/news</code></p>
+        </div>
+        <div class="tool-card">
+          <b>核验清单</b>
+          <ul><li>主体是否就是本页讨论对象</li><li>是否有可点击原文</li><li>日期是事件日还是转载日</li><li>是否已有更正/撤稿</li><li>是否只是行业共性被安到品牌头上</li><li>若要行动：负责人与截止时间是谁</li></ul>
+        </div>
+      </div>
+
+      <div class="news-board">
+        <div class="col good">
+          <div class="col-h">
+            <div>
+              <h3>进展</h3>
+              <p class="col-help">产品发布、合作、扩产、功能更新、可核验的业务进展（须与「CapCut」主体对齐）。</p>
+            </div>
+            <span class="count" id="pos-count-label">2</span>
+          </div>
+          <div class="col-body" id="positive-list"><article class="nc positive">
+    <div class="nc-meta"><span class="badge">进展 01</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://news.google.com/search?q=CapCut&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">「CapCut」公开进展检索入口</a></h3>
+    <p>用关键词 CapCut / 剪映 扫描产品发布、合作与可核验业务动态。进入结果后仍需人工确认主体与时间；本条本身不是事件。</p>
+    <div class="nc-foot"><a href="https://news.google.com/search?q=CapCut&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article><article class="nc positive">
+    <div class="nc-meta"><span class="badge">进展 02</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://duckduckgo.com/?q=CapCut+launch+OR+release+OR+partnership+OR+发布+OR+合作&amp;ia=news" target="_blank" rel="noopener noreferrer">内容创作工具 语境下的建设性信号补充检索</a></h3>
+    <p>补充查找 launch / release / partnership / 发布 / 合作 等建设性公开材料，并与「CapCut」主体对齐后方可进入进展栏。</p>
+    <div class="nc-foot"><a href="https://duckduckgo.com/?q=CapCut+launch+OR+release+OR+partnership+OR+发布+OR+合作&amp;ia=news" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article></div>
+        </div>
+        <div class="col bad">
+          <div class="col-h">
+            <div>
+              <h3>风险 / 争议</h3>
+              <p class="col-help">召回、诉讼、处罚、故障、数据安全、虚假宣传、大规模投诉等；在 内容创作工具 中这些条目默认更高证据门槛。</p>
+            </div>
+            <span class="count" id="crit-count-label">5</span>
+          </div>
+          <div class="col-body" id="critical-list"><article class="nc critical">
+    <div class="nc-meta"><span class="badge">风险/争议 01</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://news.google.com/search?q=CapCut+(recall OR lawsuit OR complaint OR fine OR investigation OR 处罚 OR 投诉 OR 召回 OR 故障)&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">「CapCut」风险向检索：投诉/处罚/召回/诉讼</a></h3>
+    <p>优先暴露 版权侵权、订阅陷阱感知、云同步故障、生成内容合规 相关公开材料。命中后先看原文，再看是否与主体直接相关。</p>
+    <div class="nc-foot"><a href="https://news.google.com/search?q=CapCut+(recall OR lawsuit OR complaint OR fine OR investigation OR 处罚 OR 投诉 OR 召回 OR 故障)&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article><article class="nc critical">
+    <div class="nc-meta"><span class="badge">风险/争议 02</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://duckduckgo.com/?q=CapCut+privacy+OR+security+OR+compliance+OR+隐私+OR+安全+OR+合规&amp;ia=news" target="_blank" rel="noopener noreferrer">「CapCut」安全、隐私与合规讨论检索</a></h3>
+    <p>对隐私、安全漏洞、广告宣传、数据合规类材料提高证据门槛：需要可定位来源与明确时间。</p>
+    <div class="nc-foot"><a href="https://duckduckgo.com/?q=CapCut+privacy+OR+security+OR+compliance+OR+隐私+OR+安全+OR+合规&amp;ia=news" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article><article class="nc critical">
+    <div class="nc-meta"><span class="badge">风险/争议 03</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://duckduckgo.com/?q=%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E5%B7%A5%E5%85%B7%20%E9%A3%8E%E9%99%A9%20%E7%9B%91%E7%AE%A1%20%E6%8A%95%E8%AF%89%20%E6%96%B0%E9%97%BB&amp;ia=news" target="_blank" rel="noopener noreferrer">内容创作工具 行业对照：避免把共性写成个例</a></h3>
+    <p>检索 内容创作工具 政策、供应链与竞争波动，用来判断某条涉及「CapCut」的新闻究竟是个例还是行业冲击。</p>
+    <div class="nc-foot"><a href="https://duckduckgo.com/?q=%E5%86%85%E5%AE%B9%E5%88%9B%E4%BD%9C%E5%B7%A5%E5%85%B7%20%E9%A3%8E%E9%99%A9%20%E7%9B%91%E7%AE%A1%20%E6%8A%95%E8%AF%89%20%E6%96%B0%E9%97%BB&amp;ia=news" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article><article class="nc critical">
+    <div class="nc-meta"><span class="badge">风险/争议 04</span><span>编辑配置的检索入口</span></div>
+    <h3><a href="https://news.google.com/search?q=CapCut+(outage OR delay OR refund OR 故障 OR 维权 OR 投诉)&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">「CapCut」服务故障/维权/渠道争议补充</a></h3>
+    <p>用于发现停服、延迟、退款难、渠道冲突、大规模差评等线索。社交帖需与权威来源交叉后才提升结论强度。</p>
+    <div class="nc-foot"><a href="https://news.google.com/search?q=CapCut+(outage OR delay OR refund OR 故障 OR 维权 OR 投诉)&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article><article class="nc critical">
+    <div class="nc-meta"><span class="badge">风险/争议 05</span><span>编辑提示</span></div>
+    <h3><a href="https://duckduckgo.com/?q=CapCut%20%E5%89%AA%E6%98%A0+(scam OR counterfeit OR 山寨 OR 经销商 OR 授权)" target="_blank" rel="noopener noreferrer">主体错配与山寨/经销商新闻过滤提示</a></h3>
+    <p>同名企业、经销商活动、假冒店铺常与「CapCut」混淆。摘要前核对中英文主体、域名与授权关系，不确定则降级为待核验。</p>
+    <div class="nc-foot"><a href="https://duckduckgo.com/?q=CapCut%20%E5%89%AA%E6%98%A0+(scam OR counterfeit OR 山寨 OR 经销商 OR 授权)" target="_blank" rel="noopener noreferrer">阅读原文</a><span>日期以原文为准</span></div>
+  </article></div>
+        </div>
+      </div>
+      <p class="news-foot-note">日更 00:00 CST；/api/news 可取 JSON。独立站与品牌无关。</p>
+    </div></section>
+
+    
+    <section id="industry"><div class="wrap">
+      <div class="sec-head"><div><h2>行业专属分析 · 内容创作工具</h2><p>创作工具的公开讨论集中在功能更新、模板生态、导出限制、版权与平台分发联动。</p></div></div>
+      <div class="g2" style="margin-bottom:12px">
+        <div class="panel"><h3>行业结构轴</h3><div class="g2" style="grid-template-columns:1fr 1fr;gap:10px"><div class="card"><h3>结构 1 · 核心剪辑/生成能力</h3><p>在 内容创作工具 中阅读「CapCut」相关公开信息时，把“核心剪辑/生成能力”单独建轴，避免被单次发布或单条投诉带节奏。</p></div><div class="card"><h3>结构 2 · 模板与素材库</h3><p>在 内容创作工具 中阅读「CapCut」相关公开信息时，把“模板与素材库”单独建轴，避免被单次发布或单条投诉带节奏。</p></div><div class="card"><h3>结构 3 · 跨端同步</h3><p>在 内容创作工具 中阅读「CapCut」相关公开信息时，把“跨端同步”单独建轴，避免被单次发布或单条投诉带节奏。</p></div><div class="card"><h3>结构 4 · 会员与导出限制</h3><p>在 内容创作工具 中阅读「CapCut」相关公开信息时，把“会员与导出限制”单独建轴，避免被单次发布或单条投诉带节奏。</p></div><div class="card"><h3>结构 5 · 版权与商用授权</h3><p>在 内容创作工具 中阅读「CapCut」相关公开信息时，把“版权与商用授权”单独建轴，避免被单次发布或单条投诉带节奏。</p></div></div></div>
+        <div class="panel"><h3>中国市场校对</h3><p style="margin:0;color:var(--muted);font-size:14px">若材料涉及中国市场，额外核对：主体中英文名是否一致、是否为授权商/经销商新闻、监管口径是否仅适用于特定省份或平台、中英文稿是否存在表述差。检索词可用：CapCut / 剪映。</p>
+          <h3 style="margin-top:16px">阅读方法</h3><ul><li>先行业结构，后品牌条目，再决定是否进入新闻双栏。</li><li>高风险主题（安全、资金、召回、处罚）默认提高证据门槛。</li><li>行业共性波动不要直接写成品牌独有危机。</li><li>政策与合规变化优先看适用范围和生效时间。</li></ul>
+        </div>
+      </div>
+      <div class="g3">
+        <div class="panel"><h3>重点观察</h3><ul><li>围绕「CapCut」核验：大版本功能</li><li>围绕「CapCut」核验：素材版权争议</li><li>围绕「CapCut」核验：导出水印/清晰度策略</li><li>围绕「CapCut」核验：账号封禁与申诉</li><li>围绕「CapCut」核验：与短视频平台联动</li></ul></div>
+        <div class="panel"><h3>高价值信号源</h3><ul><li>更新日志</li><li>版权方声明</li><li>用户大规模投诉</li><li>平台政策变更</li></ul></div>
+        <div class="panel"><h3>行业风险主题</h3><ul><li>内容创作工具 高频风险主题：版权侵权</li><li>内容创作工具 高频风险主题：订阅陷阱感知</li><li>内容创作工具 高频风险主题：云同步故障</li><li>内容创作工具 高频风险主题：生成内容合规</li></ul></div>
+      </div>
+    </div></section>
+    
+    <section id="brand"><div class="wrap">
+      <div class="sec-head"><div><h2>品牌 / 主体专属切片</h2><p>本页观察「CapCut」在 内容创作工具 中的公开进展、渠道/产品信号与争议，不承接官方服务。</p></div></div>
+      <h3 class="subhead">品牌硬事实 · capcut</h3>
+      <div class="fact-strip">
+    <div class="fact-card">
+      <span>事实 01</span>
+      <strong>CapCut 是面向国际市场的视频创作工具。</strong>
+    </div>
+    <div class="fact-card">
+      <span>事实 02</span>
+      <strong>核心能力覆盖剪辑、模板、字幕与生成式功能。</strong>
+    </div>
+    <div class="fact-card">
+      <span>事实 03</span>
+      <strong>CapCut 与剪映有关联，但区域产品与条款并不完全相同。</strong>
+    </div></div>
+      <div class="g2" style="margin-bottom:12px">
+        <div class="panel"><h3>声誉驱动因素</h3><ul><li>产品/服务是否兑现公开承诺（对「CapCut」最敏感的是 版权侵权）。</li><li>沟通是否及时：故障、召回、下架、涨价是否有清楚说明。</li><li>渠道体验：购买、配送、售后、门店或在线客服的公开投诉密度。</li><li>是否频繁出现主体错配（经销商、同名公司、山寨）。</li></ul></div>
+        <div class="panel"><h3>观察节奏</h3><ul><li>每日：扫描进展/风险候选，维护双栏。</li><li>每周：复盘误伤、漏检、旧闻循环，更新关注词。</li><li>重大事件：提高更新频率，但证据门槛不降。</li><li>无材料日：保持空态，不编造“看起来丰富”的条目。</li></ul><p style="margin:12px 0 0;color:var(--muted);font-size:13px">名称「CapCut」仅用于指称。本站与权利人无隶属、无授权、非客服。</p></div>
+      </div>
+      <h3 class="subhead">公开信息落点</h3>
+      <div class="g4" style="margin-bottom:14px"><div class="card"><h3>核心剪辑/生成能力</h3><p>与「CapCut」相关的公开材料若落到“核心剪辑/生成能力”，优先提取可核验事实（时间、主体、范围），再看解读与情绪。索引 1。</p></div><div class="card"><h3>模板与素材库</h3><p>与「CapCut」相关的公开材料若落到“模板与素材库”，优先提取可核验事实（时间、主体、范围），再看解读与情绪。索引 2。</p></div><div class="card"><h3>跨端同步</h3><p>与「CapCut」相关的公开材料若落到“跨端同步”，优先提取可核验事实（时间、主体、范围），再看解读与情绪。索引 3。</p></div><div class="card"><h3>会员与导出限制</h3><p>与「CapCut」相关的公开材料若落到“会员与导出限制”，优先提取可核验事实（时间、主体、范围），再看解读与情绪。索引 4。</p></div></div>
+      <h3 class="subhead">争议模式（先核验再写入风险栏）</h3>
+      <div class="g3" style="margin-bottom:14px"><div class="card"><h3>版权侵权</h3><p>历史与同类行业中，“版权侵权”常见于 内容创作工具。看到相关标题时，先核原文、主体、时间，再决定是否写入风险栏。</p></div><div class="card"><h3>订阅陷阱感知</h3><p>历史与同类行业中，“订阅陷阱感知”常见于 内容创作工具。看到相关标题时，先核原文、主体、时间，再决定是否写入风险栏。</p></div><div class="card"><h3>云同步故障</h3><p>历史与同类行业中，“云同步故障”常见于 内容创作工具。看到相关标题时，先核原文、主体、时间，再决定是否写入风险栏。</p></div><div class="card"><h3>生成内容合规</h3><p>历史与同类行业中，“生成内容合规”常见于 内容创作工具。看到相关标题时，先核原文、主体、时间，再决定是否写入风险栏。</p></div></div>
+      <h3 class="subhead">研究切入点</h3>
+      <div class="g3"><div class="card"><h3>版本/政策时间线</h3><p>为「CapCut」建立发布时间、政策生效、价格调整与故障窗口的时间线，防止旧闻当新发。</p></div><div class="card"><h3>口径差对照</h3><p>官方说明 vs 媒体报道 vs 用户集中反馈，三列对照，只把重叠事实升级为高置信。</p></div><div class="card"><h3>区域差</h3><p>同一产品在不同市场的功能、价格、合规与可用性可能不同；摘要必须写清区域。</p></div><div class="card"><h3>竞品对照</h3><p>把同类事件放到 内容创作工具 竞品背景中，区分行业冲击与个体问题。</p></div><div class="card"><h3>可行动点</h3><p>每条高价值线索最终落到：知晓 / 内部同步 / 需尽调 / 需升级处理，四选一。</p></div><div class="card"><h3>反钓鱼</h3><p>任何声称“CapCut 官方”但指向本独立站或索要验证码的路径，均视为高风险。</p></div></div>
+    </div></section>
+
+    <section id="focus"><div class="wrap">
+      <div class="sec-head"><div><h2>关注维度</h2><p>稳定阅读轴，避免被单条标题带着跑。</p></div></div>
+      <div class="g4"><div class="card"><h3>公开进展</h3><p>围绕「CapCut」的产品发布、区域业务、合作通告与可核验事实，优先保留时间戳与原文链接。</p></div><div class="card"><h3>行业背景</h3><p>将 内容创作工具 的竞品动态、监管环境、供应链与渠道变化放在同一阅读框架，避免孤立解读单条标题。</p></div><div class="card"><h3>风险与争议</h3><p>单独扩大投诉、召回、诉讼、安全事件、广告争议、数据合规与舆论反弹等内容的可见度。</p></div><div class="card"><h3>信息核验</h3><p>每条摘要尽量对应来源机构、发布日期与二次核对入口；无法核验则不进入正式列表。</p></div><div class="card"><h3>主体对齐</h3><p>确认报道主体确实指向本页讨论的「CapCut」，而不是同名企业、经销商或无关拼写变体。</p></div><div class="card"><h3>对称阅读</h3><p>进展与风险对照阅读；看到单边情绪化标题时提高证据门槛。</p></div><div class="card"><h3>更新节奏</h3><p>北京时间每日 00:00 触发重要公开新闻识别；材料不足时显示实际条数，不补假内容。</p></div><div class="card"><h3>商业边界</h3><p>本站可展示域名资产与询价入口，但不冒充官网，不收集账号、验证码或支付信息。</p></div></div>
+    </div></section>
+
+    <section id="guide"><div class="wrap">
+      <div class="sec-head"><div><h2>阅读分层</h2><p>按时间预算使用本页：扫描 → 核验 → 归类 → 决策前尽调。</p></div></div>
+      <div class="g4"><div class="guide"><b>30 秒</b><p>确认本站是独立页、与「CapCut」无关；扫一眼今日进展条数与风险条数，判断是否有值得展开的条目。</p></div><div class="guide"><b>3 分钟</b><p>先读风险栏再读进展栏；对诉讼、处罚、召回、大规模故障条目点开原文，核对主体与日期。</p></div><div class="guide"><b>10 分钟</b><p>结合关注维度与方法说明，把线索归入：事实已确认 / 待核验 / 不相关。需要行动时写出负责人与截止时间。</p></div><div class="guide"><b>决策前</b><p>本页只是目录与扫描器。采购、合作、投资、公关响应请另做尽调：多源交叉、内部材料、法务/合规意见。</p></div></div>
+    </div></section>
+
+    <section id="about"><div class="wrap">
+      <div class="sec-head"><div><h2>定位与边界</h2><p>本站写什么、不写什么、如何更新、如何核验。</p></div></div>
+      <div class="g2">
+        <div class="panel"><h3>说明</h3><div style="display:grid;gap:10px"><div class="block"><h3>观察范围</h3><p>覆盖 内容创作工具 语境下与「CapCut」相关的产品、市场、监管与舆论公开信息。重点提取可核验事实，并附原文链接。检索词：CapCut / 剪映。</p></div><div class="block"><h3>阅读结构</h3><p>首屏独立声明与定位 → 每日新闻双栏（左进展 / 右风险）→ 关注维度与阅读分层 → 方法、风险矩阵、场景与清单 → FAQ 与联系。摘要不能替代原文。</p></div><div class="block"><h3>与品牌关系</h3><p>本站是关于「CapCut」公开信息的独立观察页，与 CapCut 及其关联公司无隶属、无授权、无代言、无代理关系。本站不提供官方客服、账户登录、售后受理或产品销售。页面出现的商标名、产品名仅用于指称公开讨论对象，便于检索与对照阅读。</p></div><div class="block"><h3>更新机制</h3><p>北京时间每日 00:00 运行识别任务。系统检索公开来源、提取摘要、按立场分流，并写入共享存储供本页 /api/news 读取。失败时保留诚实空态或上次可信状态。</p></div><div class="block"><h3>编排配额</h3><p>进展最多 4 条，风险/争议最多 12 条，目标比例约 1:3。这是展示上限，不是强制补齐；禁止编造不存在的负面结论。</p></div><div class="block"><h3>核验建议</h3><p>先看来源与日期，再看摘要，再打开原文。对诉讼、处罚、召回、安全事故等条目，至少做一次交叉核对，并确认主体名称与本页讨论对象一致。</p></div><div class="block"><h3>写作克制</h3><p>摘要压缩事实与分歧，不扩写情绪化结论，不把检索入口伪装成已发生事件。无法核验的材料不进入正式列表。</p></div><div class="block"><h3>商业意图</h3><p>如需域名合作或过户沟通，可邮件 admin@chinacapcut.com。本站不提供官方客服。</p></div><div class="block"><h3>范围外事项</h3><p>官方售后、账户找回、支付退款、线下门店服务、授权咨询等请走官方渠道。本站不代收材料、不代提交申请。</p></div><div class="block"><h3>协作建议</h3><p>团队内转发时附原文；高风险条目标注待核验；从信息中拆出有负责人与截止时间的行动项。</p></div></div></div>
+        <div>
+          <div class="panel" style="margin-bottom:12px"><h3>阅读清单</h3><ol><li>主体名称是否与本页一致</li><li>是否有可点击原文链接</li><li>日期是否明确、是否过时</li><li>是否区分事实与评论</li><li>风险条目是否交叉核对</li><li>是否存在更正/撤稿</li><li>重大决策是否另做尽调</li><li>是否误把本站当官网</li><li>是否向邮箱发送了敏感凭证（不应）</li><li>行动项是否指定负责人与时限</li></ol></div>
+          <div class="panel"><h3>证据核验清单</h3><ul><li>是否有可点击原文链接</li><li>来源机构是否可识别</li><li>日期是否明确（发布时间/事件时间）</li><li>主体是否与「CapCut」对齐</li><li>是否区分事实、评论与传闻</li><li>高风险条目是否有第二来源</li><li>是否存在更正、撤稿或辟谣</li><li>是否影响决策，或仅供知晓</li><li>若进入行动，是否指定负责人与时限</li><li>是否误把本站或摘要当作官网结论</li></ul></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section id="risk"><div class="wrap">
+      <div class="sec-head"><div><h2>风险矩阵</h2><p>先看见高成本误判，再决定是否把线索升级为行动。</p></div></div>
+      <div class="g2"><div class="risk lv-hi"><span class="lv">高</span><div><h3>主体错配</h3><p>报道写的是同名企业、经销商或无关拼写，却被误读为「CapCut」。摘要前先核对主体。</p></div></div><div class="risk lv-hi"><span class="lv">高</span><div><h3>诉讼/处罚/召回误传</h3><p>此类信息传播成本高。缺少原文、日期或被更正后仍转述，会造成严重误判。</p></div></div><div class="risk lv-hi"><span class="lv">高</span><div><h3>仿冒官网与钓鱼</h3><p>本站已标明独立。任何引导登录、索要验证码或支付的第三方页面都应高度警惕。</p></div></div><div class="risk lv-mid"><span class="lv">中</span><div><h3>营销稿当事实</h3><p>软文、转发与情绪化标题容易放大进展、压缩风险。需提高证据门槛。</p></div></div><div class="risk lv-mid"><span class="lv">中</span><div><h3>行业系统性波动</h3><p>内容创作工具 的政策、供应链与渠道变化可能被误读为单一品牌独有问题，需要对照阅读。</p></div></div><div class="risk lv-lo"><span class="lv">低</span><div><h3>旧闻循环</h3><p>聚合源可能重复推送旧稿。注意 publishedAt 与事件发生时间是否一致。</p></div></div></div>
+    </div></section>
+
+    <section id="method"><div class="wrap">
+      <div class="sec-head"><div><h2>方法与原则</h2><p>证据门槛、来源优先级、空态诚实与行动拆分。</p></div></div>
+      <div class="g4"><div class="card"><h3>证据门槛</h3><p>高风险结论需要更高证据密度：原始文件或权威报道、多源交叉、明确时间与主体对齐。达不到门槛就标为待核验或丢弃。</p></div><div class="card"><h3>来源优先级</h3><p>原始通告 &gt; 主流报道 &gt; 研究机构 &gt; 行业媒体 &gt; 聚合转载。越靠后，越需要额外核验。</p></div><div class="card"><h3>对立解释</h3><p>同一事件若存在多方说法，摘要并列呈现，不把“更响的声音”写成唯一事实。</p></div><div class="card"><h3>降级规则</h3><p>缺链接、缺时间、主体不清、明显营销话术：不进入确定性表述，最多作为线索。</p></div><div class="card"><h3>空态诚实</h3><p>今日无足够可信材料时显示空态。空态是质量信号，不是系统故障。</p></div><div class="card"><h3>更新失败</h3><p>日更任务失败时，页面保持可访问；新闻区显示空态或上次可信状态，不用低质量条目填满。</p></div><div class="card"><h3>摘要边界</h3><p>摘要服务扫描，不服务情绪。不扩写未证实动机，不预测未发生结果。</p></div><div class="card"><h3>行动拆分</h3><p>信息与行动分开：先确认事实，再决定是否立项、是否升级、是否对外回应。</p></div></div>
+      <div class="g3" style="margin-top:12px"><div class="card"><h3>声明优先</h3><p>任何阅读路径都先经过独立站声明，降低误认官网的概率。</p></div><div class="card"><h3>证据优先</h3><p>没有可回溯证据，就不升级为确定表述。</p></div><div class="card"><h3>对称优先</h3><p>进展与风险对照呈现，抑制单边叙事。</p></div><div class="card"><h3>空态优先</h3><p>宁可空，不硬凑；宁可少更新，不制造虚假确定性。</p></div><div class="card"><h3>最小权限</h3><p>涉及 Agent/MCP 讨论时，默认只读与可回收会话权限。</p></div><div class="card"><h3>人工负责</h3><p>自动化可以起草，责任仍在人；不可逆动作必须门禁。</p></div></div>
+    </div></section>
+
+    <section id="play"><div class="wrap">
+      <div class="sec-head"><div><h2>操作流程</h2><p>从扫描/询价到验收的最小可执行路径。</p></div></div>
+      <div class="steps"><div class="step"><b>01</b><h3>扫描</h3><p>用「CapCut / 剪映」扫描公开材料，收入候选池。</p></div><div class="step"><b>02</b><h3>过滤</h3><p>去掉无链接、无日期、主体不清与明显软文。</p></div><div class="step"><b>03</b><h3>分流</h3><p>建设性公开信息进进展栏；投诉/合规/故障进风险栏。</p></div><div class="step"><b>04</b><h3>核验</h3><p>确认是否指向「CapCut」，必要时交叉第二来源。</p></div><div class="step"><b>05</b><h3>摘要</h3><p>压缩事实与分歧，保留原文链接与时间。</p></div><div class="step"><b>06</b><h3>复盘</h3><p>空态或误伤案例记录原因，改进过滤规则。</p></div></div>
+    </div></section>
+
+    <section id="scenarios"><div class="wrap">
+      <div class="sec-head"><div><h2>典型场景</h2><p>把方法落到具体使用情境。</p></div></div>
+      <div class="g3"><div class="card"><h3>产品动态跟踪</h3><p>用固定关键词跟踪「CapCut」发布、升级与合作，先收入候选池，再人工确认是否进入进展栏。</p></div><div class="card"><h3>舆情风险扫描</h3><p>以投诉、召回、诉讼、处罚、故障为优先检索，命中后核对主体与时间，再写入风险栏。</p></div><div class="card"><h3>竞品对照阅读</h3><p>把 内容创作工具 内同类事件并列，判断是行业共性还是个体问题，避免过度归因。</p></div><div class="card"><h3>监管与政策变化</h3><p>政策稿影响面大。摘要只保留适用范围、生效时间与直接影响，细节回原文。</p></div><div class="card"><h3>渠道与供应波动</h3><p>缺货、涨价、渠道冲突类信息噪声高。需要多源交叉后才提升结论强度。</p></div><div class="card"><h3>公关预研包</h3><p>若需内部响应，整理：事实时间线、已确认点、未确认点、对外口径建议与监测词。</p></div></div>
+    </div></section>
+
+    <section id="compare"><div class="wrap">
+      <div class="sec-head"><div><h2>对照表</h2><p>清楚区分“本站提供什么 / 不提供什么”或“建议 / 高风险做法”。</p></div></div>
+      <div class="cmp"><h3>本站做法 vs 应避免的做法</h3><table><thead><tr><th>本站做法</th><th>应避免的做法</th></tr></thead><tbody><tr><td>独立声明置顶、可截图引用</td><td>视觉/话术仿冒官网</td></tr><tr><td>进展与风险分栏，风险约 3×</td><td>只摘好消息或只堆恐慌</td></tr><tr><td>无材料时诚实空态</td><td>用假新闻或重复条目填满</td></tr><tr><td>摘要附原文，强调回查</td><td>把二手标题写成最终结论</td></tr></tbody></table></div>
+    </div></section>
+
+    <section id="templates"><div class="wrap">
+      <div class="sec-head"><div><h2>可用模板</h2><p>询价、任务卡、线索记录与转发格式，减少协作摩擦。</p></div></div>
+      <div class="g2"><div class="block"><h3>线索记录模板</h3><pre>标题：
+来源：
+日期：
+主体是否为「CapCut」：
+链接：
+事实要点：
+对立解释：
+结论强度：已确认/待核验/不相关</pre></div><div class="block"><h3>内部转发模板</h3><pre>链接：
+一句话事实：
+风险等级：
+是否需行动：
+负责人：
+截止时间：</pre></div></div>
+    </div></section>
+
+    <section id="pipeline"><div class="wrap">
+      <div class="sec-head"><div><h2>更新流水线</h2><p>从扫描到发布的固定步骤，保证可预期与可复盘。</p></div></div>
+      <div class="g4"><div class="time"><b>T0 扫描</b><p>按关键词与公开源拉取候选材料。</p></div><div class="time"><b>T1 过滤</b><p>去除无链接、无日期、主体不清与低质量聚合。</p></div><div class="time"><b>T2 分流</b><p>按进展/风险分栏，并应用 1:3 展示纪律。</p></div><div class="time"><b>T3 核验</b><p>高风险条目交叉核对；不通过则降级或丢弃。</p></div><div class="time"><b>T4 摘要</b><p>压缩事实与分歧，保留原文与时间。</p></div><div class="time"><b>T5 发布</b><p>写入存储，供页面与 /api/news 读取。</p></div><div class="time"><b>T6 复盘</b><p>记录空态、误伤与漏检，改进规则。</p></div><div class="time"><b>日节奏</b><p>北京时间 00:00 触发；失败则保持诚实状态。</p></div></div>
+    </div></section>
+
+    <section id="longform"><div class="wrap">
+      <div class="sec-head"><div><h2>深度说明</h2><p>为什么这样编排，以及如何把本页用于预研而不是替代尽调。</p></div></div>
+      <div class="panel"><p class="longp">chinacapcut.com 选择把声明、方法、风险纪律与新闻编排放在同一视图，是为了减少“多级页面导致声明漂移”的问题：访客不需要点进二级页才能看到“非官网、无授权、非客服”。对「CapCut」名称的使用，始终服务于指称与检索，而不是视觉或话术上的官方化。</p><p class="longp">在 内容创作工具 中阅读公开信息，常见误判有三类：把标题情绪当事实、把转载当一手来源、把未证实渠道消息写进决策备忘。本站的纠偏顺序是：先主体、后时间、再对立解释、最后才行动。检索词「CapCut / 剪映」只负责发现候选，不负责证明相关。</p><p class="longp">风险栏目标展示量约为进展栏的三倍，不是为了制造负面，而是对冲传播结构：建设性通稿与合作稿通常更容易被放大。配额是展示纪律；当没有足够可信材料时，风险栏同样可以空态。空态比硬凑更有利于信任。</p><p class="longp">日更识别设定在北京时间 00:00，对应可预期的节奏。节奏服务的是漏读控制，而不是“每天必须有猛料”。任务失败时，正确做法是保留上次可信状态或显示空态，而不是用低质量填充换取“看起来很忙”。</p><p class="longp">若你将本页用于采购、合作、投资或公关预研，请把页面当目录：收集链接 → 交叉核验 → 内部结论 → 再行动。跳过中间层会显著提高误判与声誉风险。团队协作建议固化三个动作：转发附原文、高风险标注待核验、行动项指定负责人与截止时间。</p><p class="longp">行业专属阅读框架（内容创作工具）：创作工具的公开讨论集中在功能更新、模板生态、导出限制、版权与平台分发联动。 建议按结构轴「核心剪辑/生成能力 / 模板与素材库 / 跨端同步 / 会员与导出限制 / 版权与商用授权」组织材料，而不是按标题刺激度排序。</p><p class="longp">品牌观察切片：本页观察「CapCut」在 内容创作工具 中的公开进展、渠道/产品信号与争议，不承接官方服务。 声誉驱动因素包括：产品/服务是否兑现公开承诺（对「CapCut」最敏感的是 版权侵权）。；沟通是否及时：故障、召回、下架、涨价是否有清楚说明。；渠道体验：购买、配送、售后、门店或在线客服的公开投诉密度。；是否频繁出现主体错配（经销商、同名公司、山寨）。。</p><p class="longp">中国市场校对：若材料涉及中国市场，额外核对：主体中英文名是否一致、是否为授权商/经销商新闻、监管口径是否仅适用于特定省份或平台、中英文稿是否存在表述差。检索词可用：CapCut / 剪映。</p><p class="longp">最后，关于联系与边界：邮箱 admin@chinacapcut.com 用于阅读反馈、纠错与域名沟通。请勿发送密码、验证码、私钥或支付口令。本站不会以官方客服身份要求你提供账户凭证；任何相反说法都应视为可疑。</p></div>
+    </div></section>
+
+    <section id="glossary"><div class="wrap">
+      <div class="sec-head"><div><h2>术语表</h2><p>统一用词，降低跨团队协作成本。</p></div></div>
+      <div class="g4"><div class="card"><h3>独立站</h3><p>与品牌权利人无隶属、无授权的信息页或资产页。出现品牌名不等于官方。</p></div><div class="card"><h3>进展栏</h3><p>展示建设性公开信息：发布、合作、扩产、升级等，需可核验。</p></div><div class="card"><h3>风险栏</h3><p>展示投诉、争议、合规、故障、处罚、召回等，目标展示量约为进展的三倍。</p></div><div class="card"><h3>证据门槛</h3><p>进入正式列表所需的最低材料质量：主体清晰、可回溯来源、时间可定位。</p></div><div class="card"><h3>空态</h3><p>今日无足够可信材料时的诚实展示，不等于“无事发生”。</p></div><div class="card"><h3>主体对齐</h3><p>确认报道对象确实是本页讨论的「CapCut」，而非同名或无关实体。</p></div><div class="card"><h3>日更识别</h3><p>北京时间 00:00 触发的公开材料扫描与摘要任务（Cron 对应 UTC 16:00）。</p></div><div class="card"><h3>内容创作工具</h3><p>本页行业语境。阅读「CapCut」相关信息时，需结合该行业的监管与渠道特征，避免孤立解读。</p></div><div class="card"><h3>对称阅读</h3><p>进展与风险对照阅读，抑制单边叙事。</p></div><div class="card"><h3>交叉核验</h3><p>至少使用两个独立来源核对高风险事实。</p></div><div class="card"><h3>待核验</h3><p>线索存在但证据不足，不得写成确定结论。</p></div></div>
+    </div></section>
+
+    <section id="resources"><div class="wrap">
+      <div class="sec-head"><div><h2>资源与检索入口</h2><p>用于人工复核与扩展阅读，不构成本站背书。</p></div></div>
+      <div class="g3"><a class="res" href="https://news.google.com/search?q=CapCut&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer"><strong>Google News 检索</strong><span>以「CapCut」相关词检索公开报道入口</span></a><a class="res" href="https://duckduckgo.com/?q=CapCut%20%2F%20%E5%89%AA%E6%98%A0&amp;ia=news" target="_blank" rel="noopener noreferrer"><strong>DuckDuckGo News</strong><span>补充检索与对照，不构成本站背书</span></a><a class="res" href="https://news.google.com/search?q=CapCut+(recall OR lawsuit OR complaint OR fine OR 处罚 OR 投诉 OR 召回)&amp;hl=zh-CN&amp;gl=CN&amp;ceid=CN:zh-Hans" target="_blank" rel="noopener noreferrer"><strong>风险向检索</strong><span>投诉/处罚/召回等线索入口</span></a><a class="res" href="https://www.wipo.int/amc/en/domains/" target="_blank" rel="noopener noreferrer"><strong>WIPO 域名争议概览</strong><span>域名争议与程序背景（买方尽调参考）</span></a><a class="res" href="https://www.icann.org/resources/pages/dndr-2012-02-25-en" target="_blank" rel="noopener noreferrer"><strong>ICANN 域名争议资源</strong><span>政策背景阅读，非法律意见</span></a><a class="res" href="/api/news" target="_blank" rel="noopener noreferrer"><strong>本站新闻 API</strong><span>同域 JSON：positive / critical / updatedAt</span></a><a class="res" href="mailto:admin@chinacapcut.com" target="_blank" rel="noopener noreferrer"><strong>邮件联系</strong><span>纠错、反馈、询价；勿发敏感凭证</span></a><a class="res" href="https://chinacapcut.com/" target="_blank" rel="noopener noreferrer"><strong>本页首页</strong><span>规范入口，便于引用与核验声明</span></a></div>
+    </div></section>
+
+    <section id="faq"><div class="wrap">
+      <div class="sec-head"><div><h2>常见问题</h2><p>独立站、新闻编排、自动化边界与联系方式。</p></div></div>
+      <details class="faq"><summary>本站是官网吗？</summary><p>本站是关于「CapCut」公开信息的独立观察页，与 CapCut 及其关联公司无隶属、无授权、无代言、无代理关系。本站不提供官方客服、账户登录、售后受理或产品销售。页面出现的商标名、产品名仅用于指称公开讨论对象，便于检索与对照阅读。</p></details><details class="faq"><summary>新闻从哪里来？如何更新？</summary><p>北京时间每日 00:00 识别公开可访问材料，提取摘要后按进展/风险分栏展示，并尽量附原文链接。材料不足时显示空态，不编造条目。页面也可通过 /api/news 读取 JSON。</p></details><details class="faq"><summary>为什么风险栏比进展栏多？</summary><p>展示目标上风险/争议约为进展的三倍（上限约 12:4），用于对冲公开传播中进展稿更容易被放大的结构偏差。配额是上限，不是强制补齐；没有材料时风险栏也可以空。</p></details><details class="faq"><summary>摘要能直接当决策依据吗？</summary><p>不能。摘要只帮助扫描。诉讼、处罚、召回、采购、投资、公关响应等重大判断请回原文，并做独立尽调与专业意见。</p></details><details class="faq"><summary>如何判断一条信息是否值得跟进？</summary><p>看四点：主体是否匹配、是否有原文、是否有日期、是否影响你的决策。四者缺二，先降级为待核验。</p></details><details class="faq"><summary>为什么页面会出现「CapCut」名称？</summary><p>名称仅用于指称公开讨论对象，便于检索与对照阅读，不代表授权、合作、代言或背书。</p></details><details class="faq"><summary>是否提供官方客服、登录或售后？</summary><p>不提供。账户、订单、退款、维修、门店与授权事宜请走权利人官方渠道。</p></details><details class="faq"><summary>可以要求删除某条摘要吗？</summary><p>请附原文链接与理由邮件说明。涉及事实核验的会复核；不接受无依据施压，也不因情绪化要求删除已核验公开事实。</p></details><details class="faq"><summary>新闻任务失败会怎样？</summary><p>页面保持可访问；新闻区显示空态或上次状态，不拿虚假条目填满。</p></details><details class="faq"><summary>是否存储用户个人信息？</summary><p>页面浏览不要求登录。请勿在邮件中发送密码、验证码、私钥或支付口令。</p></details><details class="faq"><summary>和域名销售是什么关系？</summary><p>如需合作或过户沟通，可邮件 admin@chinacapcut.com。即使存在询价入口，本站仍是独立观察页，不是官网。</p></details><details class="faq"><summary>如何联系？</summary><p>邮件 admin@chinacapcut.com。请写明来意（阅读反馈 / 纠错 / 询价）。本站不会以官方客服身份索要账户凭证。</p></details><details class="faq"><summary>内容会自动翻译或改写吗？</summary><p>摘要以事实对齐为主，不保证多语言完整翻译。关键表述请以原文为准。</p></details><details class="faq"><summary>如何快速使用本页？</summary><p>30 秒看声明与条数；3 分钟先读风险栏；10 分钟做归类；决策前另做尽调。</p></details>
+    </div></section>
+
+    <section id="contact"><div class="wrap">
+      <div class="disc">
+        <h2>免责声明与联系</h2>
+        <p>本站是关于「CapCut」公开信息的独立观察页，与 CapCut 及其关联公司无隶属、无授权、无代言、无代理关系。本站不提供官方客服、账户登录、售后受理或产品销售。页面出现的商标名、产品名仅用于指称公开讨论对象，便于检索与对照阅读。</p>
+        <p>新闻区只做公开信息提取与编排，不构成投资、法律、医疗、采购或公关建议。转载摘要请回到原文核对上下文。</p>
+        <p>请勿向本站邮箱发送密码、验证码、私钥或支付口令。本站不会以官方客服身份索要账户凭证。</p>
+        <p><strong style="color:#fff">联系邮箱：</strong><a href="mailto:admin@chinacapcut.com">admin@chinacapcut.com</a></p>
+        <p><strong style="color:#fff">检索词：</strong>CapCut / 剪映</p>
+      </div>
+    </div></section>
+  </main>
+
+  <footer><div class="wrap">
+    <div><strong>chinacapcut.com</strong><br>CapCut 产品与生态观察</div>
+    <div>独立观察 / 销售页 · 与品牌无关 · 日更识别 00:00 CST · 详尽编辑页</div>
+  </div></footer>
+
+  <script>
+  (function(){
+    function esc(s){return String(s||"").replace(/[&<>"']/g,function(c){return ({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"})[c];});}
+    function cards(items, side){
+      if(!items||!items.length){
+        return '<div class="empty">'+(side==="positive"?"今日暂无足够可信的进展类公开材料。":"今日暂无足够可信的风险/争议类公开材料。")+'</div>';
+      }
+      return items.map(function(item, idx){
+        var label = side==="positive" ? "进展" : "风险/争议";
+        return '<article class="nc '+side+'"><div class="nc-meta"><span class="badge">'+label+' '+String(idx+1).padStart(2,"0")+'</span><span>'+esc(item.source||"公开来源")+'</span></div><h3><a href="'+esc(item.url)+'" target="_blank" rel="noopener noreferrer">'+esc(item.title)+'</a></h3><p>'+esc(item.summary)+'</p><div class="nc-foot"><a href="'+esc(item.url)+'" target="_blank" rel="noopener noreferrer">阅读原文</a><span>'+esc(item.publishedAt||"日期以原文为准")+'</span></div></article>';
+      }).join("");
+    }
+    fetch("/api/news?domain="+encodeURIComponent(location.hostname.replace(/^www\./,"").toLowerCase()),{credentials:"same-origin"})
+      .then(function(r){return r.ok?r.json():null})
+      .then(function(data){
+        if(!data) return;
+        var pos=data.positive||[]; var crit=data.critical||[];
+        if(data.updatedAt){ var el=document.getElementById("news-updated"); if(el) el.textContent=data.updatedAt; }
+        var pc=document.getElementById("pos-count"); if(pc) pc.textContent=String(pos.length||0);
+        var cc=document.getElementById("crit-count"); if(cc) cc.textContent=String(crit.length||0);
+        var pcl=document.getElementById("pos-count-label"); if(pcl) pcl.textContent=String(pos.length||0);
+        var ccl=document.getElementById("crit-count-label"); if(ccl) ccl.textContent=String(crit.length||0);
+        var pl=document.getElementById("positive-list"); if(pl && pos.length) pl.innerHTML=cards(pos,"positive");
+        var cl=document.getElementById("critical-list"); if(cl && crit.length) cl.innerHTML=cards(crit,"critical");
+      }).catch(function(){});
+  })();
+  </script>
+</body>
+</html>
